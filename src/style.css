@@ -1,3 +1,40 @@
-.hello {
-    color: red;
-  }
+body {
+  background-color: #e6a52e;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+#intro {
+ font-size: 1.5em;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+input[type=submit] {
+  padding: 5px 10px;
+  background-color: #EFEFEF;
+  color: #000;
+  border-radius: 4px;
+}
+
+#temp-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp {
+  font-size: 128px;
+  padding-left: 24px;
+}
+
+.sign {
+  font-size: 32px;
+  padding-bottom: 80px;
+  width: 24px;
+}

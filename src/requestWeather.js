@@ -10,9 +10,10 @@ async function getWeatherData(location) {
     if (response.status === 400) {
         throwErrorMsg();
     } else {
+        console.log("Loading!");
         const weatherData = await response.json();
-        console.log(weatherData);
         displayCurrentWeather(weatherData.current);
+        console.log("Done!");
     }
 }
 

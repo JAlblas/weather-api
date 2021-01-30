@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
+    <p id="intro">Select your location:</p>
     <form>
       <input type="text" name="location" id="">
       <input type="submit" value="Fetch weather" id="fetchWeatherButton">
     </form>
+    <div id="temp-div"></div>
     <script src="bundle.js"></script>
   </body>
 </html>
