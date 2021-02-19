@@ -1,8 +1,11 @@
 function displayCurrentWeather(data) {
-    var elem = document.querySelector('.temp');
+    var elem = document.querySelector('.temp-box');
     if (elem) {
         elem.parentNode.removeChild(elem);
     }
+
+    const tempBox = document.createElement('div');
+    tempBox.classList.add('temp-box');
 
     const element = document.createElement('p');
     element.innerHTML = data.temp_c;
@@ -13,8 +16,9 @@ function displayCurrentWeather(data) {
     celciusSign.classList.add('sign');
 
     let container = document.querySelector('#temp-div');
-    container.appendChild(element); 
-    container.appendChild(celciusSign); 
+    tempBox.appendChild(element); 
+    tempBox.appendChild(celciusSign); 
+    container.appendChild(tempBox);
 }
 
 export default displayCurrentWeather;

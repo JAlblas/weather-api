@@ -31,10 +31,12 @@ input[type=submit] {
 .temp {
   font-size: 128px;
   padding-left: 24px;
+  display:inline-block;
 }
 
 .sign {
   font-size: 32px;
   padding-bottom: 80px;
   width: 24px;
+  display:inline-block;
 }
