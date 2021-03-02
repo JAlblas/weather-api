@@ -1,6 +1,7 @@
-import { displayCurrentWeather, displayErrorMessage } from './viewManager';
+import { displayCurrentWeather, displayErrorMessage, showActivityIndicator, removeActivityIndicator } from './viewManager';
 
 async function getWeatherData(location) {
+    showActivityIndicator();
     const response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=c1fc52efb6b3458d8d8135816211201&q=${location}`,
         {
@@ -10,11 +11,11 @@ async function getWeatherData(location) {
     if (response.status === 400) {
         displayErrorMessage();
     } else {
-        console.log("Loading!");
         const weatherData = await response.json();
         displayCurrentWeather(weatherData.current);
-        console.log("Done!");
     }
+
+    removeActivityIndicator()
 }
 
 export default getWeatherData;

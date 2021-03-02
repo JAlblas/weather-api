@@ -6,6 +6,7 @@ body {
 
 #intro {
  font-size: 1.5em;
+ font-weight: bold;
 }
 
 input {
@@ -16,11 +17,12 @@ input {
 }
 
 input[type=submit] {
-  padding: 10px 15px;
+  padding: 8px 15px;
   background-color: #EFEFEF;
   color: #000;
   border-radius: 3px;
   font-size: 0.9em;
+  margin-top: 10px;
 }
 
 input[type=text] {
@@ -65,4 +67,29 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

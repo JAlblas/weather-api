@@ -24,12 +24,25 @@ function displayCurrentWeather(data) {
 function displayErrorMessage() {
     const element = document.createElement('p');
     element.innerHTML = "Error fetching temperature";
-    element.classList.add('temp');
 
     let container = document.querySelector('#temp-div');
     container.innerHTML = "";
     container.appendChild(element); 
 }
 
+function showActivityIndicator() {
+    const element = document.createElement('p');
+    element.innerHTML = "";
+    element.classList.add('lds-dual-ring');
 
-export { displayCurrentWeather, displayErrorMessage };
+    let container = document.querySelector('#temp-div');
+    container.innerHTML = "";
+    container.appendChild(element);
+}
+
+function removeActivityIndicator() {
+    const element = document.querySelector('.lds-dual-ring');
+    element.classList.remove('lds-dual-ring');
+}
+
+export { displayCurrentWeather, displayErrorMessage, showActivityIndicator, removeActivityIndicator };
