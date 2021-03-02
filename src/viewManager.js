@@ -21,4 +21,15 @@ function displayCurrentWeather(data) {
     container.appendChild(tempBox);
 }
 
-export default displayCurrentWeather;
+function displayErrorMessage() {
+    const element = document.createElement('p');
+    element.innerHTML = "Error fetching temperature";
+    element.classList.add('temp');
+
+    let container = document.querySelector('#temp-div');
+    container.innerHTML = "";
+    container.appendChild(element); 
+}
+
+
+export { displayCurrentWeather, displayErrorMessage };

@@ -1,4 +1,4 @@
-import displayCurrentWeather from './viewManager';
+import { displayCurrentWeather, displayErrorMessage } from './viewManager';
 
 async function getWeatherData(location) {
     const response = await fetch(
@@ -8,7 +8,7 @@ async function getWeatherData(location) {
         }
     );
     if (response.status === 400) {
-        throwErrorMsg();
+        displayErrorMessage();
     } else {
         console.log("Loading!");
         const weatherData = await response.json();
