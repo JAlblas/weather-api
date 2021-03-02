@@ -3,7 +3,7 @@ import { displayCurrentWeather, displayErrorMessage, showActivityIndicator, remo
 async function getWeatherData(location) {
     showActivityIndicator();
     const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=c1fc52efb6b3458d8d8135816211201&q=${location}`,
+        `https://api.weatherapi.com/v1/forecast.json?key=c1fc52efb6b3458d8d8135816211201&q=${location}`,
         {
         mode: 'cors',
         }
